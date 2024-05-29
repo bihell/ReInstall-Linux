@@ -32,7 +32,7 @@ plain='\033[0m'
 export tmpVER=''
 export tmpDIST=''
 export tmpURL=''
-export tmpWORD=''
+export tmpWORD=$(tr -dc 'A-Za-z0-9' </dev/urandom | head -c 16)
 export tmpMirror=''
 export tmpDHCP=''
 export targetRelese=''
@@ -3160,7 +3160,7 @@ ${FormatDisk}
 
 ### Package selection
 tasksel tasksel/first multiselect minimal
-d-i pkgsel/include string openssh-server
+d-i pkgsel/include string openssh-server lrzsz net-tools rsync socat curl sudo wget telnet iptables gpg zsh python3 pip nmap tree iperf3 vnstat iptables-persistent
 
 # Automatic updates are not applied, everything is updated manually.
 d-i pkgsel/update-policy select none
