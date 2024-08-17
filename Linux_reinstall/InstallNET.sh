@@ -3160,7 +3160,7 @@ ${FormatDisk}
 
 ### Package selection
 tasksel tasksel/first multiselect minimal
-d-i pkgsel/include string openssh-server lrzsz net-tools rsync socat curl sudo wget telnet iptables gpg zsh python3 pip nmap tree iperf3 vnstat iptables-persistent traceroute sysstat unzip
+d-i pkgsel/include string openssh-server lrzsz net-tools rsync socat curl sudo wget telnet iptables gpg zsh python3 pip nmap tree iperf3 vnstat iptables-persistent traceroute sysstat unzip htop
 
 # Automatic updates are not applied, everything is updated manually.
 d-i pkgsel/update-policy select none
