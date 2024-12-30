@@ -2795,7 +2795,7 @@ function DebianModifiedPreseed() {
 		}
 		AptUpdating="$1 apt update -y;"
 		# pre-install some commonly used software.
-		InstallComponents="$1 apt install apt-transport-https ca-certificates cron curl dnsutils dpkg ${fail2banComponent} file lrzsz lsb-release net-tools sudo vim wget lnav -y;"
+		InstallComponents="$1 apt install apt-transport-https ca-certificates cron curl dnsutils dpkg ${fail2banComponent} file lrzsz lsb-release net-tools sudo vim wget lnav mtr -y;"
 		# In Debian 9 and former, some certificates are expired.
 		DisableCertExpiredCheck="$1 sed -i '/^mozilla\/DST_Root_CA_X3/s/^/!/' /etc/ca-certificates.conf; $1 update-ca-certificates -f;"
 		if [[ "$IsCN" == "cn" ]]; then
